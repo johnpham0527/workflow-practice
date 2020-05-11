@@ -1,0 +1,25 @@
+{
+  "name": "workflow-practice",
+  "version": "1.0.0",
+  "description": "I am learning how to set up a workflow by using this package as practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnpham0527/workflow-practice.git"
+  },
+  "keywords": [
+    "npm",
+    "workflow",
+    "practice",
+    "gulp"
+  ],
+  "author": "John Pham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnpham0527/workflow-practice/issues"
+  },
+  "homepage": "https://github.com/johnpham0527/workflow-practice#readme"
+}

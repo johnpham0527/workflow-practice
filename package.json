@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/johnpham0527/workflow-practice#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "babel-core": "^6.26.3",

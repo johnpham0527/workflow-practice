@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/johnpham0527/workflow-practice#readme",
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-connect": "^5.7.0"

@@ -1,6 +1,8 @@
-function defaultTask(cb) {
-  // place code for your default task here
+const {src, dest} = require('gulp');
+
+function html(cb) {
+  src('src/calculator.html').pipe(dest('build'));
   cb();
 }
 
-exports.default = defaultTask
+exports.default = html

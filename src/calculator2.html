@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="A JavaScript Calculator Written in React and Redux">
+        <meta name="keywords" content="React, JavaScript, Redux">
+        <link rel="stylesheet" href="calc.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>Calculator</h1>
+            </header>
+    
+            <main>
+                <div>
+                    <div id="main" style="border: medium none; width: 280px; padding: 10px; border-radius: 10px; font-size: 2em; background-color: rgb(40, 36, 97); display: grid; grid-template-rows: 2.5em repeat(5, 1fr);">
+                    <div id="display" style="border: 1px solid black; width: 256px; min-height: 2em; padding: 10px; text-align: right; margin-top: 5px; margin-bottom: 50px; background-color: rgb(238, 238, 238); border-radius: 10px; grid-row: 1;">
+                        0
+                    </div>
+                    <div id="buttonRow1" gridrow="2">
+                        <button class="calcBtn">CE</button>
+                        <button id="clear" class="calcBtn">C</button>
+                        <button class="calcBtn">Del</button>
+                        <button id="divide" class="calcBtn">/</button>
+                    </div>
+                    <div id="buttonRow2" gridrow="3">
+                        <button id="seven" class="calcBtn">7</button>
+                        <button id="eight" class="calcBtn">8</button>
+                        <button id="nine" class="calcBtn">9</button>
+                        <button id="multiply" class="calcBtn">*</button>
+                    </div>
+                    <div id="buttonRow3" gridrow="4">
+                        <button id="four" class="calcBtn">4</button>
+                        <button id="five" class="calcBtn">5</button>
+                        <button id="six" class="calcBtn">6</button>
+                        <button id="subtract" class="calcBtn">-</button>
+                    </div>
+                    <div id="buttonRow4" gridrow="5">
+                        <button id="one" class="calcBtn">1</button>
+                        <button id="two" class="calcBtn">2</button>
+                        <button id="three" class="calcBtn">3</button>
+                        <button id="add" class="calcBtn">+</button>
+                    </div><div id="buttonRow5" gridrow="6">
+                        <button class="calcBtn">+|-</button>
+                        <button id="zero" class="calcBtn">0</button>
+                        <button id="decimal" class="calcBtn">.</button>
+                        <button id="equals" class="calcBtn">=</button>
+                    </div></div>
+                </div>
+            </main>
+    
+            <footer>
+                <small>&copy; Copyright 2020, John D. Pham</small>
+            </footer>
+        </div>
+
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin ></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.7.1/redux.min.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.5/react-redux.min.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux-thunk/2.3.0/redux-thunk.min.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.min.js" crossorigin></script>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" crossorigin></script>
+        <script src="calc.js"></script>
+    </body>
+</html>

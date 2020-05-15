@@ -431,16 +431,11 @@ class MyComponent extends React.Component {
                     "div",
                     {
                         id: "main",
-                        style: this.calculatorContainerStyle
                     },
                     React.createElement(
                         "div",
                         {
                             id: "display",
-                            style: {
-                                ...this.calculatorDisplayStyle,
-                                gridRow: "1",
-                            }
                         },
                         this.props.storeState.display
                     ),

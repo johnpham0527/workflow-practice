@@ -414,66 +414,26 @@ class MyComponent extends React.Component {
                         },
                         this.props.storeState.display
                     ),
-                    /* Button Row 1 */
-                    React.createElement(
-                        "div",
-                        {
-                            id: "buttonRow1",
-                            gridRow: "2",
-                        },
-                        CalcButton("CE", {onClick: () => this.handleCalcButton("CE")}),
-                        CalcButton("C", {id: "clear", onClick: () => this.handleCalcButton("clearAll")}),
-                        CalcButton("Del", {onClick: () => this.handleCalcButton("Del")}),
-                        CalcButton("/", {id: "divide", onClick: () => this.handleCalcButton("divide")}),
-                    ),
-                    /* Button Row 2 */
-                    React.createElement(
-                        "div",
-                        {
-                            id: "buttonRow2",
-                            gridRow: "3"
-                        },
-                        CalcButton("7", {id: "seven", onClick: () => this.handleCalcButton("7")}),
-                        CalcButton("8", {id: "eight", onClick: () => this.handleCalcButton("8")}),
-                        CalcButton("9", {id: "nine", onClick: () => this.handleCalcButton("9")}),
-                        CalcButton( "*", {id: "multiply", onClick: () => this.handleCalcButton("multiply")}),
-                    ),
-                    /* Button Row 3 */
-                    React.createElement(
-                        "div",
-                        {
-                            id: "buttonRow3",
-                            gridRow: "4"
-                        },
-                        CalcButton("4", {id: "four", onClick: () => this.handleCalcButton("4")}),
-                        CalcButton("5", {id: "five", onClick: () => this.handleCalcButton("5")}),
-                        CalcButton("6", {id: "six", onClick: () => this.handleCalcButton("6")}),
-                        CalcButton("-", {id: "subtract", onClick: () => this.handleCalcButton("subtract")}),
-                    ),
-                    /* Button Row 4 */
-                    React.createElement(
-                        "div",
-                        {
-                            id: "buttonRow4",
-                            gridRow: "5"
-                        },
-                        CalcButton("1", {id: "one", onClick: () => this.handleCalcButton("1")}),
-                        CalcButton("2", {id: "two", onClick: () => this.handleCalcButton("2")}),
-                        CalcButton("3", {id: "three", onClick: () => this.handleCalcButton("3")}),
-                        CalcButton("+", {id: "add", onClick: () => this.handleCalcButton("add")}),
-                    ),
-                    /* Button Row 5 */
-                    React.createElement(
-                        "div",
-                        {
-                            id: "buttonRow5",
-                            gridRow: "6"
-                        },
-                        CalcButton("+|-", {onClick: () => this.handleCalcButton("plusMinus")}),
-                        CalcButton("0", {id: "zero", onClick: () => this.handleCalcButton("0")}),
-                        CalcButton(".", {id: "decimal", onClick: () => this.handleCalcButton("decimal")}),
-                        CalcButton("=", {id: "equals", onClick: () => this.handleCalcButton("equal")}),
-                    ),
+                    CalcButton("CE", {onClick: () => this.handleCalcButton("CE")}),
+                    CalcButton("C", {id: "clear", onClick: () => this.handleCalcButton("clearAll")}),
+                    CalcButton("Del", {onClick: () => this.handleCalcButton("Del")}),
+                    CalcButton("/", {id: "divide", onClick: () => this.handleCalcButton("divide")}),
+                    CalcButton("7", {id: "seven", onClick: () => this.handleCalcButton("7")}),
+                    CalcButton("8", {id: "eight", onClick: () => this.handleCalcButton("8")}),
+                    CalcButton("9", {id: "nine", onClick: () => this.handleCalcButton("9")}),
+                    CalcButton( "*", {id: "multiply", onClick: () => this.handleCalcButton("multiply")}),
+                    CalcButton("4", {id: "four", onClick: () => this.handleCalcButton("4")}),
+                    CalcButton("5", {id: "five", onClick: () => this.handleCalcButton("5")}),
+                    CalcButton("6", {id: "six", onClick: () => this.handleCalcButton("6")}),
+                    CalcButton("-", {id: "subtract", onClick: () => this.handleCalcButton("subtract")}),
+                    CalcButton("1", {id: "one", onClick: () => this.handleCalcButton("1")}),
+                    CalcButton("2", {id: "two", onClick: () => this.handleCalcButton("2")}),
+                    CalcButton("3", {id: "three", onClick: () => this.handleCalcButton("3")}),
+                    CalcButton("+", {id: "add", onClick: () => this.handleCalcButton("add")}),
+                    CalcButton("+|-", {onClick: () => this.handleCalcButton("plusMinus")}),
+                    CalcButton("0", {id: "zero", onClick: () => this.handleCalcButton("0")}),
+                    CalcButton(".", {id: "decimal", onClick: () => this.handleCalcButton("decimal")}),
+                    CalcButton("=", {id: "equals", onClick: () => this.handleCalcButton("equal")}),
                 )
             )
         )

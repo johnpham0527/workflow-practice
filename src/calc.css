@@ -54,7 +54,7 @@ main {
 ====================*/
 #main {
     border: medium none;
-    width: 280px;
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
     font-size: 2em;
@@ -63,11 +63,12 @@ main {
     grid-template-rows: 2.5em repeat(5, 1fr);
     grid-template-columns: repeat(4, 60px);
     grid-auto-rows: 64px;
+    grid-gap: 1px;
 }
 
 #display {
     border: 1px solid black;
-    width: 256px;
+    width: 100%;
     min-height: 2em;
     padding: 10px;
     text-align: right;

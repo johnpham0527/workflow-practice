@@ -52,23 +52,6 @@ main {
     
 /* App
 ====================*/
-.calcBtn {
-    width: 60px;
-    height: 60px;
-    font-size: 0.5em;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 8px;
-    background-color: #693220;
-    color: white;
-    border: none;
-    text-align: center;
-    padding: 10px;
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 #main {
     border: medium none;
     width: 280px;
@@ -91,4 +74,21 @@ main {
     background-color: rgb(238, 238, 238);
     border-radius: 10px;
     grid-row: 1;
+}
+
+.calcBtn {
+    width: 60px;
+    height: 60px;
+    font-size: 0.5em;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    background-color: #693220;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
 }

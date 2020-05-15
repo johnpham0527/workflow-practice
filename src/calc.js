@@ -357,32 +357,7 @@ class MyComponent extends React.Component {
     constructor(props) {
         super(props);
         
-        this.handleCalcButton = this.handleCalcButton.bind(this);
-
-        this.calculatorContainerStyle = {
-            border: "1px solid black",
-            width: "280px",
-            padding: "10px",
-            borderRadius: "10px",
-            border: "none",
-            fontSize: "2em",
-            backgroundColor: "#282461",
-            display: "grid",
-            gridTemplateRows: "2.5em repeat(5, 1fr)"
-        };
-
-        this.calculatorDisplayStyle = {
-            border: "1px solid black",
-            width: "256px",
-            minHeight: "2em",
-            padding: "10px",
-            textAlign: "right",
-            marginTop: "5px",
-            marginBottom: "50px",
-            backgroundColor: "#eeeeee",
-            borderRadius: "10px"
-        }
-        
+        this.handleCalcButton = this.handleCalcButton.bind(this);       
     }
 
     handleCalcButton(buttonValue) {

@@ -14,23 +14,20 @@ async function clean(cb) {
 
 function html(cb) {
   src(`${origin}/*.html`).pipe(dest(`${destination}`));
-  //src('src/*.html').pipe(dest('build'));
   cb();
 }
 function css(cb) {
   src(`${origin}/*.css`).pipe(dest(`${destination}/css`));
-  //src('src/*css').pipe(dest('build'));
   cb();
 }
 
 function js(cb) {
-  src(`${origin}/*.js`)
-  //src('src/*.js')
-  //.pipe(babel({presets: ['es2015']}))
+  src([
+    `${origin}/*.js`
+  ])
   .pipe(concatenate('build.js'))
   .pipe(babel())
   .pipe(dest(`${destination}/js`));
-  //.pipe(dest('build'));
   cb();
 }
 
@@ -47,11 +44,9 @@ function server(cb) {
     open: false,
     server: {
       baseDir: destination
-      //baseDir: "./build"
     }
   });
   cb();
 }
 
 exports.default = series(clean, parallel(html, css, js), server, watcher);
-//exports.default = series(clean, parallel(html, css, js));

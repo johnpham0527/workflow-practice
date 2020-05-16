@@ -3,9 +3,12 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const babel = require('gulp-babel');
 const concatenate = require ('gulp-concat');
+const sass = require('gulp-sass');
 
 const origin = 'src';
 const destination = 'build';
+
+sass.compiler = require('node-sass');
 
 async function clean(cb) {
   await del(destination);
@@ -17,7 +20,11 @@ function html(cb) {
   cb();
 }
 function css(cb) {
-  src(`${origin}/*.css`).pipe(dest(`${destination}/css`));
+  src(`${origin}/*.css`)
+  .pipe(sass({
+    outputStyle: 'compressed'
+  }))
+  .pipe(dest(`${destination}/css`));
   cb();
 }
 

@@ -1,7 +1,7 @@
 const {src, dest, series} = require('gulp');
 const del = require('del');
 const babel = require('gulp-babel');
-const concatenate = require ('gulp-concat');
+//const concatenate = require ('gulp-concat');
 
 const origin = 'src';
 const destination = 'build';
@@ -26,11 +26,12 @@ function js(cb) {
   src(`${origin}/*.js`)
   //src('src/*.js')
   //.pipe(babel({presets: ['es2015']}))
-  .pipe(concatenate('build.js'))
+  //.pipe(concatenate('build.js'))
   .pipe(babel())
   src(`${destination}/js`)
   //.pipe(dest('build'));
   cb();
 }
 
-exports.default = series(clean, html, css, js);
+exports.default = series(clean, html, css);
+//exports.default = series(clean, html, css, js);

@@ -1,4 +1,4 @@
-const {src, dest} = require('gulp');
+const {src, dest, series} = require('gulp');
 const babel = require('gulp-babel');
 const concatenate = require ('gulp-concat');
 
@@ -20,5 +20,4 @@ function js(cb) {
   cb();
 }
 
-exports.default = html
-exports.default = js;
+exports.default = series(html, css, js);

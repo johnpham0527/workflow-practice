@@ -3,7 +3,7 @@ const babel = require('gulp-babel');
 const concatenate = require ('gulp-concat');
 
 function html(cb) {
-  src('src/calculator.html').pipe(dest('build'));
+  src('src/*.html').pipe(dest('build'));
   cb();
 }
 function css(cb) {

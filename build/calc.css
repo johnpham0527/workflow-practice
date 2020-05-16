@@ -1,0 +1,95 @@
+/* Global Styles
+====================*/
+html {
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+#container > * {
+    padding: 1em;
+}
+  
+#container {
+    color: #2F3040;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+}
+
+/* Header and Footer
+====================*/
+header {
+    margin-top: 200px;
+    text-align: center;
+    grid-row: 1;
+}
+
+footer {
+    text-align: center;
+    grid-row: 3;
+}
+
+/* Main
+====================*/
+main {
+    margin: auto;
+    grid-row: 2;
+}
+    
+/* App
+====================*/
+#main {
+    border: medium none;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 10px;
+    font-size: 2em;
+    background-color: rgb(40, 36, 97);
+    display: grid;
+    grid-template-rows: 2.5em repeat(5, 1fr);
+    grid-template-columns: repeat(4, 60px);
+    grid-gap: 0.25em;
+}
+
+#display {
+    border: 1px solid black;
+    width: 100%;
+    min-height: 2em;
+    padding: 10px;
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    grid-row: 1;
+    grid-column: 1 / span 4;
+}
+
+.calcBtn {
+    width: 60px;
+    height: 60px;
+    font-size: 0.5em;
+    border-radius: 8px;
+    background-color: #693220;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}

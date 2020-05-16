@@ -6,6 +6,13 @@ function html(cb) {
   cb();
 }
 
-
+function js(cb) {
+  src('src/calc.js')
+  //.pipe(babel({presets: ['es2015']}))
+  .pipe(babel())
+  .pipe(dest('build'));
+  cb();
+}
 
 exports.default = html
+exports.default = js;

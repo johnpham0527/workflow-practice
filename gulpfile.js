@@ -2,7 +2,7 @@ const {src, dest, series, parallel} = require('gulp');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const babel = require('gulp-babel');
-//const concatenate = require ('gulp-concat');
+const concatenate = require ('gulp-concat');
 
 const origin = 'src';
 const destination = 'build';
@@ -27,7 +27,7 @@ function js(cb) {
   src(`${origin}/*.js`)
   //src('src/*.js')
   //.pipe(babel({presets: ['es2015']}))
-  //.pipe(concatenate('build.js'))
+  .pipe(concatenate('build.js'))
   .pipe(babel())
   .pipe(dest(`${destination}/js`));
   //.pipe(dest('build'));
@@ -39,12 +39,12 @@ function server(cb) {
     notify: false,
     open: false,
     server: {
-      //baseDir: destination
-      baseDir: "./build"
+      baseDir: destination
+      //baseDir: "./build"
     }
   });
   cb();
 }
 
-//exports.default = series(clean, parallel(html, css, js), server);
-exports.default = series(clean, parallel(html, css, js));
+exports.default = series(clean, parallel(html, css, js), server);
+//exports.default = series(clean, parallel(html, css, js));

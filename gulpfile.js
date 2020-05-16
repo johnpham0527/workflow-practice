@@ -6,6 +6,10 @@ function html(cb) {
   src('src/calculator.html').pipe(dest('build'));
   cb();
 }
+function css(cb) {
+  src('src/*css').pipe(dest('build'));
+  cb();
+}
 
 function js(cb) {
   src('src/*.js')

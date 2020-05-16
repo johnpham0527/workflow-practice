@@ -8,24 +8,29 @@ const destination = 'build';
 
 function clean(cb) {
   del(destination);
+  cb();
 }
 
 function html(cb) {
-  src('src/*.html').pipe(dest('build'));
+  src(`${origin}/*.html`).pipe(dest(`${destination}`));
+  //src('src/*.html').pipe(dest('build'));
   cb();
 }
 function css(cb) {
-  src('src/*css').pipe(dest('build'));
+  src(`${origin}/*.css`).pipe(dest(`${destination}/css`))
+  //src('src/*css').pipe(dest('build'));
   cb();
 }
 
 function js(cb) {
-  src('src/*.js')
+  src(`${origin}/*.js`)
+  //src('src/*.js')
   //.pipe(babel({presets: ['es2015']}))
   .pipe(concatenate('build.js'))
   .pipe(babel())
-  .pipe(dest('build'));
+  src(`${destination}/js`)
+  //.pipe(dest('build'));
   cb();
 }
 
-exports.default = series(html, css, js);
+exports.default = series(clean, html, css, js);

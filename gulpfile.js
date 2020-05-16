@@ -7,7 +7,7 @@ const origin = 'src';
 const destination = 'build';
 
 async function clean(cb) {
-  del(destination);
+  await del(destination);
   cb();
 }
 

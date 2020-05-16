@@ -6,7 +6,7 @@ const babel = require('gulp-babel');
 const origin = 'src';
 const destination = 'build';
 
-function clean(cb) {
+async function clean(cb) {
   del(destination);
   cb();
 }

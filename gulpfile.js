@@ -1,6 +1,14 @@
 const {src, dest, series} = require('gulp');
+const del = require('del');
 const babel = require('gulp-babel');
 const concatenate = require ('gulp-concat');
+
+const origin = 'src';
+const destination = 'build';
+
+function clean(cb) {
+  del(destination);
+}
 
 function html(cb) {
   src('src/*.html').pipe(dest('build'));

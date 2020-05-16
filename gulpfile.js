@@ -10,7 +10,7 @@ function html(cb) {
 function js(cb) {
   src('src/*.js')
   //.pipe(babel({presets: ['es2015']}))
-
+  .pipe(concatenate())
   .pipe(babel())
   .pipe(dest('build'));
   cb();

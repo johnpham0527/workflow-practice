@@ -7,7 +7,7 @@ function html(cb) {
 }
 
 function js(cb) {
-  src('src/calc.js')
+  src('src/*.js')
   //.pipe(babel({presets: ['es2015']}))
   .pipe(babel())
   .pipe(dest('build'));

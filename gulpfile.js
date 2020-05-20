@@ -30,13 +30,16 @@ function css(cb) {
 
 function js(cb) {
   src([
-    `${origin}/*.js`,
-    `${origin}/*.jsx`
+    `${origin}/*.js`
   ])
   .pipe(concatenate('build.js'))
+  .pipe(babel()).on('error', gutil.log)
+  /*
   .pipe(babel({
+    presets: ['env', 'react'],
     plugins: ['transform-react-jsx']
   }))
+  */
   .pipe(dest(`${destination}/js`));
   cb();
 }

@@ -30,7 +30,8 @@ function css(cb) {
 
 function js(cb) {
   src([
-    `${origin}/*.js`
+    `${origin}/*.js`,
+    `${origin}/*.jsx`
   ])
   .pipe(concatenate('build.js'))
   .pipe(babel())

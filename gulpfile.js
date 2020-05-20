@@ -2,6 +2,7 @@ const {src, dest, series, parallel, watch} = require('gulp');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const babel = require('gulp-babel');
+const plumber = require('gulp-plumber');
 const concatenate = require ('gulp-concat');
 const sass = require('gulp-sass');
 
@@ -29,11 +30,24 @@ function css(cb) {
 }
 
 function js(cb) {
+
+  var onError = function(err) {
+    notify.onError({
+                title:    "Gulp",
+                subtitle: "Failure!",
+                message:  "Error: <%= error.message %>",
+                sound:    "Beep"
+            })(err);
+
+    this.emit('end');
+};
+
   src([
     `${origin}/*.js`
   ])
+  .pipe(plumber({erroHandler: onError}))
   .pipe(concatenate('build.js'))
-  .pipe(babel()).on('error', gutil.log)
+  .pipe(babel())
   /*
   .pipe(babel({
     presets: ['env', 'react'],

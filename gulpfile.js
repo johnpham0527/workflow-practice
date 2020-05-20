@@ -47,13 +47,11 @@ function js(cb) {
   ])
   .pipe(plumber({erroHandler: onError}))
   .pipe(concatenate('build.js'))
-  .pipe(babel())
-  /*
+  //.pipe(babel())
   .pipe(babel({
-    presets: ['env', 'react'],
-    plugins: ['transform-react-jsx']
+    //presets: ['env', 'react'],
+    plugins: ['@babel/plugin-proposal-class-properties']
   }))
-  */
   .pipe(dest(`${destination}/js`));
   cb();
 }

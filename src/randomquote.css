@@ -52,9 +52,15 @@ main {
 
 /* App
 ====================*/
+#quote-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .tweet {
-  width: 50px;
-  height: auto;
+  width: auto;
+  height: 3em;
+  margin: 0;
 }
 
 #text {
@@ -67,6 +73,7 @@ main {
 }
 
 #new-quote {
+  margin: 0;
   width: 12em;
   height: 3em;
   font-size: 1em;
@@ -75,7 +82,6 @@ main {
   color: white;
   border: none;
   text-align: center;
-  border: none;
   text-decoration: none;
   cursor: pointer;
 }

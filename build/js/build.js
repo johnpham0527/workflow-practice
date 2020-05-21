@@ -168,7 +168,7 @@ var DisplayRandomButton = function DisplayRandomButton(props) {
     id: "new-quote",
     type: "submit",
     onClick: props.random
-  }, "Random Quote");
+  }, "New Quote");
 };
 
 var DisplayTweetIcon = function DisplayTweetIcon(props) {

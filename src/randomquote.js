@@ -113,7 +113,7 @@ class App extends React.Component {
 
 const DisplayRandomButton = (props) => {
     return (
-      <button id='new-quote' type='submit' onClick={props.random}>Random Quote</button>
+      <button id='new-quote' type='submit' onClick={props.random}>New Quote</button>
     );
 }
 

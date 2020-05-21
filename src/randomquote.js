@@ -164,8 +164,6 @@ class App extends React.Component {
           <QuoteText text={this.props.storeState.text}/>
           <QuoteAuthor author={this.props.storeState.author}/>
         </blockquote>
-        <DisplayIncrementButton increment={this.increment}/>
-        <DisplayDecrementButton decrement={this.decrement}/>
         <DisplayRandomButton random={this.random}/>
         <DisplayTweetIcon author={this.props.storeState.author} text={this.props.storeState.text}/>
       </div>

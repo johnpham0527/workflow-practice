@@ -44,24 +44,6 @@ const defaultState = {
   author: quotes[0].author
 }
 
-const incrementCount = () => {
-  return {
-    type: INCREMENT
-  }
-}
-
-const decrementCount = () => {
-  return {
-    type: DECREMENT
-  }
-}
-
-const resetCount = () => {
-  return {
-    type: RESET
-  }
-}
-
 const randomCount = () => {
   return {
     type: RANDOM
@@ -71,35 +53,6 @@ const randomCount = () => {
 const countReducer = (state = defaultState, action) => {
   const new_object = Object.assign({},state);
   switch (action.type) {
-    case INCREMENT:
-       if (state.count+1 >= quotes.length) {
-        new_object.count = quotes.length-1;
-        new_object.text = quotes[quotes.length-1].text;
-        new_object.author = quotes[quotes.length-1].author;
-       }
-       else {
-         new_object.count = state.count+1;
-         new_object.text = quotes[state.count+1].text;
-         new_object.author = quotes[state.count+1].author;
-       }
-       return new_object;
-    case DECREMENT: 
-       if (state.count-1 < 0) {
-        new_object.count = 0;
-        new_object.text = quotes[0].text;
-        new_object.author = quotes[0].author;
-       }
-       else {
-        new_object.count = state.count-1;
-        new_object.text = quotes[state.count-1].text;
-        new_object.author = quotes[state.count-1].author;
-       }
-       return new_object;
-    case RESET:
-       new_object.count = 0;
-       new_object.text = quotes[0].text;
-       new_object.author = quotes[0].author;
-       return new_object;
     case RANDOM:
        new_object.count = Math.floor(Math.random()*quotes.length);
        new_object.text = quotes[new_object.count].text;
@@ -135,23 +88,10 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-
 //React Code
 class App extends React.Component {
   constructor(props) {
     super(props);
-  }
-  increment = event => {
-    event.preventDefault();
-    this.props.submitIncrement();
-  }
-  decrement = event => {
-    event.preventDefault();
-    this.props.submitDecrement();
-  }
-  reset = event => {
-    event.preventDefault();
-    this.props.submitReset();
   }
   random = event => {
     event.preventDefault();
@@ -169,30 +109,6 @@ class App extends React.Component {
       </div>
     );
   }
-}
-
-const DisplayCounter = (props) => {
-    return(
-      <span>Count: {props.counter.count}</span>
-    );
-}
-
-const DisplayIncrementButton = (props) => {
-    return(
-      <button type='submit' onClick={props.increment}>Next Quote</button>
-    );
-}
-
-const DisplayDecrementButton = (props) => {
-    return(
-      <button type='submit' onClick={props.decrement}>Previous Quote</button>
-    ); 
-}
-
-const DisplayResetButton = (props) => {
-    return(
-      <button type='submit' onClick={props.reset}>Reset</button>
-    );
 }
 
 const DisplayRandomButton = (props) => {

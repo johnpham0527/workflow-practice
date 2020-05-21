@@ -72,24 +72,6 @@ var defaultState = {
   author: quotes[0].author
 };
 
-var incrementCount = function incrementCount() {
-  return {
-    type: INCREMENT
-  };
-};
-
-var decrementCount = function decrementCount() {
-  return {
-    type: DECREMENT
-  };
-};
-
-var resetCount = function resetCount() {
-  return {
-    type: RESET
-  };
-};
-
 var randomCount = function randomCount() {
   return {
     type: RANDOM
@@ -102,38 +84,6 @@ var countReducer = function countReducer() {
   var new_object = Object.assign({}, state);
 
   switch (action.type) {
-    case INCREMENT:
-      if (state.count + 1 >= quotes.length) {
-        new_object.count = quotes.length - 1;
-        new_object.text = quotes[quotes.length - 1].text;
-        new_object.author = quotes[quotes.length - 1].author;
-      } else {
-        new_object.count = state.count + 1;
-        new_object.text = quotes[state.count + 1].text;
-        new_object.author = quotes[state.count + 1].author;
-      }
-
-      return new_object;
-
-    case DECREMENT:
-      if (state.count - 1 < 0) {
-        new_object.count = 0;
-        new_object.text = quotes[0].text;
-        new_object.author = quotes[0].author;
-      } else {
-        new_object.count = state.count - 1;
-        new_object.text = quotes[state.count - 1].text;
-        new_object.author = quotes[state.count - 1].author;
-      }
-
-      return new_object;
-
-    case RESET:
-      new_object.count = 0;
-      new_object.text = quotes[0].text;
-      new_object.author = quotes[0].author;
-      return new_object;
-
     case RANDOM:
       new_object.count = Math.floor(Math.random() * quotes.length);
       new_object.text = quotes[new_object.count].text;
@@ -183,24 +133,6 @@ var App = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
 
-    _defineProperty(_assertThisInitialized(_this), "increment", function (event) {
-      event.preventDefault();
-
-      _this.props.submitIncrement();
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "decrement", function (event) {
-      event.preventDefault();
-
-      _this.props.submitDecrement();
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "reset", function (event) {
-      event.preventDefault();
-
-      _this.props.submitReset();
-    });
-
     _defineProperty(_assertThisInitialized(_this), "random", function (event) {
       event.preventDefault();
 
@@ -230,31 +162,6 @@ var App = /*#__PURE__*/function (_React$Component) {
 
   return App;
 }(React.Component);
-
-var DisplayCounter = function DisplayCounter(props) {
-  return /*#__PURE__*/React.createElement("span", null, "Count: ", props.counter.count);
-};
-
-var DisplayIncrementButton = function DisplayIncrementButton(props) {
-  return /*#__PURE__*/React.createElement("button", {
-    type: "submit",
-    onClick: props.increment
-  }, "Next Quote");
-};
-
-var DisplayDecrementButton = function DisplayDecrementButton(props) {
-  return /*#__PURE__*/React.createElement("button", {
-    type: "submit",
-    onClick: props.decrement
-  }, "Previous Quote");
-};
-
-var DisplayResetButton = function DisplayResetButton(props) {
-  return /*#__PURE__*/React.createElement("button", {
-    type: "submit",
-    onClick: props.reset
-  }, "Reset");
-};
 
 var DisplayRandomButton = function DisplayRandomButton(props) {
   return /*#__PURE__*/React.createElement("button", {

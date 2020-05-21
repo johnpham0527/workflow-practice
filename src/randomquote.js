@@ -164,11 +164,8 @@ class App extends React.Component {
         <p>-- <QuoteAuthor author={this.props.storeState.author}/></p>
         <DisplayIncrementButton increment={this.increment}/>
         <DisplayDecrementButton decrement={this.decrement}/>
-        {/*<DisplayResetButton reset={this.reset}/>*/}
         <DisplayRandomButton random={this.random}/>
         <DisplayTweetIcon author={this.props.storeState.author} text={this.props.storeState.text}/>
-
-         {/*<p><DisplayCounter counter={this.props.storeState}/></p>*/}
       </div>
     );
   }

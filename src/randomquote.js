@@ -236,4 +236,4 @@ class AppWrapper extends React.Component {
   }
 }
 
-ReactDOM.render(<AppWrapper />,document.getElementById('root'));
+ReactDOM.render(<AppWrapper />,document.getElementById('app'));

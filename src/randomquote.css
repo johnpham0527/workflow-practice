@@ -52,7 +52,7 @@ main {
 
 /* App
 ====================*/
-#quote-box {
+blockquote {
   display: flex;
   flex-wrap: wrap;
 }
@@ -70,13 +70,14 @@ main {
 
 #author {
   text-align: right;
+  flex: 0 0 100%;
 }
 
 #new-quote {
   margin: 0;
   width: 12em;
   height: 3em;
-  font-size: 1em;
+  font-size: 0.618em;
   border-radius: 8px;
   background-color: #693220;
   color: white;

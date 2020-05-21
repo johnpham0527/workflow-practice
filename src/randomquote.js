@@ -212,7 +212,7 @@ const DisplayTweetIcon = (props) => {
 
 const QuoteText = (props) => {
     return (
-      <p>{props.text}</p>
+      <p id='text'>{props.text}</p>
     );
 }
 

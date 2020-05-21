@@ -281,7 +281,9 @@ var DisplayTweetIcon = function DisplayTweetIcon(props) {
 };
 
 var QuoteText = function QuoteText(props) {
-  return /*#__PURE__*/React.createElement("p", null, props.text);
+  return /*#__PURE__*/React.createElement("p", {
+    id: "text"
+  }, props.text);
 };
 
 var QuoteAuthor = function QuoteAuthor(props) {

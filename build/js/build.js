@@ -289,7 +289,7 @@ var QuoteText = function QuoteText(props) {
 var QuoteAuthor = function QuoteAuthor(props) {
   return /*#__PURE__*/React.createElement("footer", {
     id: "author"
-  }, "-- ", props.author);
+  }, "\u2014 ", props.author);
 };
 
 var Container = connect(mapStateToProps, mapDispatchToProps)(App);

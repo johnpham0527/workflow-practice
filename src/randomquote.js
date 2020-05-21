@@ -218,7 +218,7 @@ const QuoteText = (props) => {
 
 const QuoteAuthor = (props) => {
     return (
-      <footer id='author'>-- {props.author}</footer>
+      <footer id='author'>&mdash; {props.author}</footer>
     );
 }
 

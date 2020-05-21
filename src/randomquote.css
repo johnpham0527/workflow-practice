@@ -55,11 +55,12 @@ main {
 blockquote {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .tweet {
   width: auto;
-  height: 3em;
+  height: 1em;
   margin: 0;
 }
 
@@ -76,7 +77,7 @@ blockquote {
 #new-quote {
   margin: 0;
   width: 12em;
-  height: 3em;
+  height: 1.618em;
   font-size: 0.618em;
   border-radius: 8px;
   background-color: #693220;

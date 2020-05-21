@@ -62,3 +62,7 @@ main {
   font-size: 1.618em;
   line-height: 1.618em;
 }
+
+#author {
+  text-align: left;
+}

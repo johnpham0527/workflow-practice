@@ -66,3 +66,18 @@ main {
 #author {
   text-align: right;
 }
+
+#new-quote {
+  width: 120px;
+  height: 60px;
+  font-size: 1em;
+  border-radius: 8px;
+  background-color: #693220;
+  color: white;
+  border: none;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -151,12 +151,12 @@ var App = /*#__PURE__*/function (_React$Component) {
         text: this.props.storeState.text
       }), /*#__PURE__*/React.createElement(QuoteAuthor, {
         author: this.props.storeState.author
-      })), /*#__PURE__*/React.createElement(DisplayRandomButton, {
-        random: this.random
       }), /*#__PURE__*/React.createElement(DisplayTweetIcon, {
         author: this.props.storeState.author,
         text: this.props.storeState.text
-      }));
+      }), /*#__PURE__*/React.createElement(DisplayRandomButton, {
+        random: this.random
+      })));
     }
   }]);
 

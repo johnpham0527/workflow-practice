@@ -103,9 +103,10 @@ class App extends React.Component {
         <blockquote>
           <QuoteText text={this.props.storeState.text}/>
           <QuoteAuthor author={this.props.storeState.author}/>
+          <DisplayTweetIcon author={this.props.storeState.author} text={this.props.storeState.text}/>
+          <DisplayRandomButton random={this.random}/>
         </blockquote>
-        <DisplayRandomButton random={this.random}/>
-        <DisplayTweetIcon author={this.props.storeState.author} text={this.props.storeState.text}/>
+
       </div>
     );
   }

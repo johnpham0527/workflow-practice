@@ -72,6 +72,8 @@ blockquote {
 #author {
   text-align: right;
   flex: 0 0 100%;
+  font-size: 1em;
+  margin-bottom: 1.618em;
 }
 
 #new-quote {

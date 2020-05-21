@@ -160,8 +160,10 @@ class App extends React.Component {
   render() {
     return (
       <div id='quote-box'>
-        <p ><QuoteText text={this.props.storeState.text}/></p>
-        <p>-- <QuoteAuthor author={this.props.storeState.author}/></p>
+        <blockquote>
+          <QuoteText text={this.props.storeState.text}/>
+          <QuoteAuthor author={this.props.storeState.author}/>
+        </blockquote>
         <DisplayIncrementButton increment={this.increment}/>
         <DisplayDecrementButton decrement={this.decrement}/>
         <DisplayRandomButton random={this.random}/>
@@ -210,13 +212,13 @@ const DisplayTweetIcon = (props) => {
 
 const QuoteText = (props) => {
     return (
-      <span id='text'>{props.text}</span>
+      <p>{props.text}</p>
     );
 }
 
 const QuoteAuthor = (props) => {
     return (
-      <span id='author'>{props.author}</span>
+      <footer id='author'>-- {props.author}</footer>
     );
 }
 

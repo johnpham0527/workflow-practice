@@ -215,9 +215,9 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/React.createElement("div", {
         id: "quote-box"
-      }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement(QuoteText, {
+      }, /*#__PURE__*/React.createElement("blockquote", null, /*#__PURE__*/React.createElement(QuoteText, {
         text: this.props.storeState.text
-      })), /*#__PURE__*/React.createElement("p", null, "-- ", /*#__PURE__*/React.createElement(QuoteAuthor, {
+      }), /*#__PURE__*/React.createElement(QuoteAuthor, {
         author: this.props.storeState.author
       })), /*#__PURE__*/React.createElement(DisplayIncrementButton, {
         increment: this.increment
@@ -281,15 +281,13 @@ var DisplayTweetIcon = function DisplayTweetIcon(props) {
 };
 
 var QuoteText = function QuoteText(props) {
-  return /*#__PURE__*/React.createElement("span", {
-    id: "text"
-  }, props.text);
+  return /*#__PURE__*/React.createElement("p", null, props.text);
 };
 
 var QuoteAuthor = function QuoteAuthor(props) {
-  return /*#__PURE__*/React.createElement("span", {
+  return /*#__PURE__*/React.createElement("footer", {
     id: "author"
-  }, props.author);
+  }, "-- ", props.author);
 };
 
 var Container = connect(mapStateToProps, mapDispatchToProps)(App);

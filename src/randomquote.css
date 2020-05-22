@@ -113,16 +113,49 @@ blockquote {
   #container {
     font-size: 48%;
   }
+
+  #text::before {
+    content: "\201C";
+    top: 20px;
+    left: -25px;
+  }
+
+  #text::after {
+    content: "\201D";
+    bottom: 38px;
+  }
 }
 
 @media all and (min-width: 431px) and (max-width: 540px) {
   #container {
     font-size: 70%;
   }
+
+  #text::before {
+    content: "\201C";
+    top: 25px;
+    left: -30px;
+  }
+
+  #text::after {
+    content: "\201D";
+    bottom: 55px;
+  }
 }
 
 @media all and (min-width: 541px) and (max-width: 830px) {
   #container {
     font-size: 90%;
+  }
+
+  #text::before {
+    content: "\201C";
+    top: 35px;
+    left: -40px;
+  }
+
+  #text::after {
+    content: "\201D";
+    bottom: 75px;
   }
 }

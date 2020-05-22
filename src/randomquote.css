@@ -91,6 +91,20 @@ blockquote {
 
 /* Mobile Styles
 ====================*/
-@media all and (max-width: 439px) {
+@media all and (max-width: 430px) {
+  #container {
+    font-size: 48%;
+  }
+}
 
+@media all and (min-width: 431px) and (max-width: 540px) {
+  #container {
+    font-size: 70%;
+  }
+}
+
+@media all and (min-width: 541px) and (max-width: 830px) {
+  #container {
+    font-size: 90%;
+  }
 }

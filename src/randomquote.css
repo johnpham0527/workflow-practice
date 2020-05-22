@@ -71,17 +71,19 @@ blockquote {
 
 #text::before {
   content: "\201C";
-  font-size: 2.618em;
-  position: absolute;
-  top: 30px;
-  left: -25px;
+  top: 40px;
+  left: -50px;
 }
 
 #text::after {
   content: "\201D";
-  font-size: 2.618em;
+  bottom: 80px;
+}
+
+#text::before, #text::after {
+  font-size: 4.236em;
   position: absolute;
-  bottom: 90px;
+  font-family: Georgia, serif;
 }
 
 #author {

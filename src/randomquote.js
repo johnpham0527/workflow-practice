@@ -14,7 +14,7 @@ const RANDOM = 'RANDOM';
     {text: 'Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.',
      author: 'Lao Tzu'
     },
-    {text: 'Everyone has talent. What\'s rare is the courage to follow it to the dark places where it leads',
+    {text: 'Everyone has talent. What\'s rare is the courage to follow it to the dark places where it leads.',
      author: 'Erica Jong'
     },
     {text: 'Confront the dark parts of yourself, and work to banish them with illumination and forgiveness. Your willingness to wrestle with your demons will cause your angels to sing.',

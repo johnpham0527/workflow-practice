@@ -73,18 +73,15 @@ blockquote {
   content: "\201C";
   font-size: 2.618em;
   position: absolute;
-  top: 20px;
-  left: -10px;
-  color: #615424;
+  top: 30px;
+  left: -25px;
 }
 
 #text::after {
   content: "\201D";
   font-size: 2.618em;
   position: absolute;
-  top: 30px;
-  left: 10px;
-  color: #615424;
+  bottom: 90px;
 }
 
 #author {

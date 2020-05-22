@@ -72,7 +72,7 @@ blockquote {
 #text::before {
   content: "\201C";
   top: 40px;
-  left: -50px;
+  left: -45px;
 }
 
 #text::after {
@@ -117,7 +117,7 @@ blockquote {
   #text::before {
     content: "\201C";
     top: 20px;
-    left: -25px;
+    left: -21px;
   }
 
   #text::after {

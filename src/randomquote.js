@@ -67,12 +67,13 @@ const quoteReducer = (state = defaultState, action) => {
   const new_object = Object.assign({},state);
   switch (action.type) {
     case RANDOM:
+      setFadeIn();
+      setTimeout(setFadeOut, 900);
        new_object.count = Math.floor(Math.random()*quotes.length);
        new_object.text = quotes[new_object.count].text;
        new_object.author = quotes[new_object.count].author;
        new_object.color = colors[Math.floor(Math.random()*colors.length)];
-       setFadeIn();
-       setTimeout(setFadeOut, 500);
+
        return new_object;       
     default:
       return state;

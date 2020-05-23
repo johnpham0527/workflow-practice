@@ -118,13 +118,17 @@ blockquote {
 
   #text::before {
     content: "\201C";
-    top: 30px;
-    left: -15px;
+    top: 25px;
+    left: -7px;
   }
 
   #text::after {
     content: "\201D";
-    bottom: 38px;
+    bottom: 45px;
+  }
+
+  #text::before, #text::after {
+    font-size: 2.618em;
   }
 }
 

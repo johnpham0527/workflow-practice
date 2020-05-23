@@ -17,7 +17,7 @@ const quotes = [
   {text: 'Confront the dark parts of yourself, and work to banish them with illumination and forgiveness. Your willingness to wrestle with your demons will cause your angels to sing.',
     author: 'August Wilson'  
   },
-    {text: 'Life shrinks or expands in proportion to one\'s courage.',
+  {text: 'Life shrinks or expands in proportion to one\'s courage.',
     author: 'Anais Nin'  
   },
   {text: 'Courage is resistance to fear, mastery of fear - not absence of fear.',
@@ -52,20 +52,21 @@ const randomCount = () => {
   }
 }
 
-const countReducer = (state = defaultState, action) => {
+const quoteReducer = (state = defaultState, action) => {
   const new_object = Object.assign({},state);
   switch (action.type) {
     case RANDOM:
        new_object.count = Math.floor(Math.random()*quotes.length);
        new_object.text = quotes[new_object.count].text;
        new_object.author = quotes[new_object.count].author;
+       new_object.color = Math.floor(Math.random()*colors.length)
        return new_object;       
     default:
       return state;
   }
 }
 
-const store = Redux.createStore(countReducer);
+const store = Redux.createStore(quoteReducer);
 
 const mapStateToProps = state => {
   return {

@@ -74,7 +74,7 @@ var randomCount = function randomCount() {
   };
 };
 
-var countReducer = function countReducer() {
+var quoteReducer = function quoteReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
   var new_object = Object.assign({}, state);
@@ -84,6 +84,7 @@ var countReducer = function countReducer() {
       new_object.count = Math.floor(Math.random() * quotes.length);
       new_object.text = quotes[new_object.count].text;
       new_object.author = quotes[new_object.count].author;
+      new_object.color = Math.floor(Math.random() * colors.length);
       return new_object;
 
     default:
@@ -91,7 +92,7 @@ var countReducer = function countReducer() {
   }
 };
 
-var store = Redux.createStore(countReducer);
+var store = Redux.createStore(quoteReducer);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {

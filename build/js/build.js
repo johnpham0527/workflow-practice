@@ -92,8 +92,6 @@ var quoteReducer = function quoteReducer() {
 
   switch (action.type) {
     case RANDOM:
-      setFadeIn();
-      setTimeout(setFadeOut, 900);
       new_object.count = Math.floor(Math.random() * quotes.length);
       new_object.text = quotes[new_object.count].text;
       new_object.author = quotes[new_object.count].author;
@@ -136,6 +134,8 @@ var App = /*#__PURE__*/function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "random", function (event) {
       event.preventDefault();
+      setFadeIn();
+      setTimeout(setFadeOut, 900);
 
       _this.props.submitRandom();
     });

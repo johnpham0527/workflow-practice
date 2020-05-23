@@ -67,12 +67,10 @@ const quoteReducer = (state = defaultState, action) => {
   const new_object = Object.assign({},state);
   switch (action.type) {
     case RANDOM:
-      setFadeIn();
-      setTimeout(setFadeOut, 900);
-       new_object.count = Math.floor(Math.random()*quotes.length);
-       new_object.text = quotes[new_object.count].text;
-       new_object.author = quotes[new_object.count].author;
-       new_object.color = colors[Math.floor(Math.random()*colors.length)];
+      new_object.count = Math.floor(Math.random()*quotes.length);
+      new_object.text = quotes[new_object.count].text;
+      new_object.author = quotes[new_object.count].author;
+      new_object.color = colors[Math.floor(Math.random()*colors.length)];
 
        return new_object;       
     default:
@@ -103,6 +101,8 @@ class App extends React.Component {
   }
   random = event => {
     event.preventDefault();
+    setFadeIn();
+    setTimeout(setFadeOut, 900);
     this.props.submitRandom();
   }
   render() {

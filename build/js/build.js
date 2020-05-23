@@ -65,6 +65,7 @@ var quotes = [{
   text: 'All happiness depends on courage and work.',
   author: 'Honoré de Balzac'
 }];
+var colors = ["#5d6124", "#61245d", "#6155424", "#472461", "#245961", "#4a467b"];
 var defaultState = {
   type: '',
   count: 0,

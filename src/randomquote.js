@@ -6,36 +6,40 @@ const DECREMENT = 'DECREMENT';
 const RESET = 'RESET';
 const RANDOM = 'RANDOM';
 
- const quotes = [
-    {
-      text: 'Success is not final, failure is not fatal: it is the courage to continue that counts.',
-      author: 'Winston S. Churchill'
-    },
-    {text: 'Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.',
-     author: 'Lao Tzu'
-    },
-    {text: 'Everyone has talent. What\'s rare is the courage to follow it to the dark places where it leads.',
-     author: 'Erica Jong'
-    },
-    {text: 'Confront the dark parts of yourself, and work to banish them with illumination and forgiveness. Your willingness to wrestle with your demons will cause your angels to sing.',
-     author: 'August Wilson'  
-    },
-     {text: 'Life shrinks or expands in proportion to one\'s courage.',
-     author: 'Anais Nin'  
-    },
-    {text: 'Courage is resistance to fear, mastery of fear - not absence of fear.',
-     author: 'Mark Twain'  
-    },
-    {text: 'Courage is found in unlikely places.',
-     author: 'J.R.R. Tolkien'  
-    },
-    {text: 'I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.',
-     author: 'Nelson Mandela'  
-    },
-    {text: 'All happiness depends on courage and work.',
-     author: 'Honoré de Balzac'  
-    },
-  ]
+const quotes = [
+  {
+    text: 'Success is not final, failure is not fatal: it is the courage to continue that counts.',
+    author: 'Winston S. Churchill'
+  },
+  {text: 'Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.',
+    author: 'Lao Tzu'
+  },
+  {text: 'Everyone has talent. What\'s rare is the courage to follow it to the dark places where it leads.',
+    author: 'Erica Jong'
+  },
+  {text: 'Confront the dark parts of yourself, and work to banish them with illumination and forgiveness. Your willingness to wrestle with your demons will cause your angels to sing.',
+    author: 'August Wilson'  
+  },
+    {text: 'Life shrinks or expands in proportion to one\'s courage.',
+    author: 'Anais Nin'  
+  },
+  {text: 'Courage is resistance to fear, mastery of fear - not absence of fear.',
+    author: 'Mark Twain'  
+  },
+  {text: 'Courage is found in unlikely places.',
+    author: 'J.R.R. Tolkien'  
+  },
+  {text: 'I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.',
+    author: 'Nelson Mandela'  
+  },
+  {text: 'All happiness depends on courage and work.',
+    author: 'Honoré de Balzac'  
+  },
+];
+
+const colors = [
+  "#5d6124", "#61245d", "#6155424", "#472461", "#245961", "#4a467b"
+]
 
 const defaultState = {
   type: '',

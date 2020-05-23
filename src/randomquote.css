@@ -109,6 +109,16 @@ blockquote {
   cursor: pointer;
 }
 
+.fadeOut {
+  opacity: 1;
+  transition: opacity .8s ease-in-out;
+  }
+
+.fadeIn {
+  opacity: 0;
+}
+
+
 /* Mobile Styles
 ====================*/
 @media all and (max-width: 430px) {

@@ -1,6 +1,6 @@
 //Redux Code
 const { Provider, connect } = ReactRedux;
-const { applyMiddleware, createStore, combineReducers, bindActionCreators} = Redux;
+const { createStore } = Redux;
 const RANDOM = 'RANDOM';
 
 const quotes = [

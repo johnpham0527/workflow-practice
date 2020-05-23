@@ -29,10 +29,7 @@ var _ReactRedux = ReactRedux,
     Provider = _ReactRedux.Provider,
     connect = _ReactRedux.connect;
 var _Redux = Redux,
-    applyMiddleware = _Redux.applyMiddleware,
-    createStore = _Redux.createStore,
-    combineReducers = _Redux.combineReducers,
-    bindActionCreators = _Redux.bindActionCreators;
+    createStore = _Redux.createStore;
 var RANDOM = 'RANDOM';
 var quotes = [{
   text: 'Success is not final, failure is not fatal: it is the courage to continue that counts.',

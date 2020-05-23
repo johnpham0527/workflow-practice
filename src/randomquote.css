@@ -56,6 +56,7 @@ blockquote {
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
+  color: white;
 }
 
 .tweet {

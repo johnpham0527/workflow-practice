@@ -59,7 +59,7 @@ const quoteReducer = (state = defaultState, action) => {
        new_object.count = Math.floor(Math.random()*quotes.length);
        new_object.text = quotes[new_object.count].text;
        new_object.author = quotes[new_object.count].author;
-       new_object.color = Math.floor(Math.random()*colors.length)
+       new_object.color = colors[Math.floor(Math.random()*colors.length)];
        return new_object;       
     default:
       return state;

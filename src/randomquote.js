@@ -93,7 +93,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div id='quote-box'>
+      <div id='quote-box' style={{backgroundColor: this.props.storeState.color}}>
         <blockquote>
           <QuoteText text={this.props.storeState.text}/>
           <QuoteAuthor author={this.props.storeState.author}/>

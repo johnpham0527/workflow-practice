@@ -134,7 +134,10 @@ var App = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/React.createElement("div", {
-        id: "quote-box"
+        id: "quote-box",
+        style: {
+          backgroundColor: this.props.storeState.color
+        }
       }, /*#__PURE__*/React.createElement("blockquote", null, /*#__PURE__*/React.createElement(QuoteText, {
         text: this.props.storeState.text
       }), /*#__PURE__*/React.createElement(QuoteAuthor, {

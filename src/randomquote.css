@@ -57,6 +57,7 @@ blockquote {
   justify-content: space-between;
   position: relative;
   color: white;
+  padding: 1em;
 }
 
 .tweet {

@@ -1,9 +1,6 @@
 //Redux Code
 const { Provider, connect } = ReactRedux;
 const { applyMiddleware, createStore, combineReducers, bindActionCreators} = Redux;
-const INCREMENT = 'INCREMENT';
-const DECREMENT = 'DECREMENT';
-const RESET = 'RESET';
 const RANDOM = 'RANDOM';
 
 const quotes = [

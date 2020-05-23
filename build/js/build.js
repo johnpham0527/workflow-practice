@@ -33,9 +33,6 @@ var _Redux = Redux,
     createStore = _Redux.createStore,
     combineReducers = _Redux.combineReducers,
     bindActionCreators = _Redux.bindActionCreators;
-var INCREMENT = 'INCREMENT';
-var DECREMENT = 'DECREMENT';
-var RESET = 'RESET';
 var RANDOM = 'RANDOM';
 var quotes = [{
   text: 'Success is not final, failure is not fatal: it is the courage to continue that counts.',

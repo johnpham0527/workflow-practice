@@ -40,9 +40,9 @@ const colors = [
 
 const defaultState = {
   type: '',
-  count: 0,
   text: quotes[0].text,
-  author: quotes[0].author
+  author: quotes[0].author,
+  color: colors[0]
 }
 
 const randomCount = () => {

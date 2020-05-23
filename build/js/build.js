@@ -106,15 +106,6 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    submitIncrement: function submitIncrement() {
-      return dispatch(incrementCount());
-    },
-    submitDecrement: function submitDecrement() {
-      return dispatch(decrementCount());
-    },
-    submitReset: function submitReset() {
-      return dispatch(resetCount());
-    },
     submitRandom: function submitRandom() {
       return dispatch(randomCount());
     }

@@ -77,15 +77,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    submitIncrement: () => {
-      return dispatch(incrementCount())
-    },
-    submitDecrement: () => {
-      return dispatch(decrementCount())
-    },
-    submitReset: () => {
-      return dispatch(resetCount())
-    },
     submitRandom: () => {
       return dispatch(randomCount())
     }

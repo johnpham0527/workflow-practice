@@ -62,6 +62,7 @@ var quotes = [{
 var colors = ["#5d6124", "#61245d", "#6155424", "#472461", "#245961", "#4a467b"];
 var defaultState = {
   type: '',
+  count: 0,
   text: quotes[0].text,
   author: quotes[0].author,
   color: colors[0]

@@ -52,6 +52,17 @@ const randomCount = () => {
   }
 }
 
+//Transition Code
+const setFadeIn = () => {
+  let slide = document.querySelector("#app");
+  slide.classList.add("fadeIn");
+}
+
+const setFadeOut = () => {
+  let slide = document.querySelector("#app");
+  slide.classList.remove("fadeIn");
+}
+
 const quoteReducer = (state = defaultState, action) => {
   const new_object = Object.assign({},state);
   switch (action.type) {
@@ -60,6 +71,8 @@ const quoteReducer = (state = defaultState, action) => {
        new_object.text = quotes[new_object.count].text;
        new_object.author = quotes[new_object.count].author;
        new_object.color = colors[Math.floor(Math.random()*colors.length)];
+       setFadeIn();
+       setTimeout(setFadeOut, 500);
        return new_object;       
     default:
       return state;

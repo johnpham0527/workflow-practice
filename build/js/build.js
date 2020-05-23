@@ -72,6 +72,17 @@ var randomCount = function randomCount() {
   return {
     type: RANDOM
   };
+}; //Transition Code
+
+
+var setFadeIn = function setFadeIn() {
+  var slide = document.querySelector("#app");
+  slide.classList.add("fadeIn");
+};
+
+var setFadeOut = function setFadeOut() {
+  var slide = document.querySelector("#app");
+  slide.classList.remove("fadeIn");
 };
 
 var quoteReducer = function quoteReducer() {
@@ -85,6 +96,8 @@ var quoteReducer = function quoteReducer() {
       new_object.text = quotes[new_object.count].text;
       new_object.author = quotes[new_object.count].author;
       new_object.color = colors[Math.floor(Math.random() * colors.length)];
+      setFadeIn();
+      setTimeout(setFadeOut, 500);
       return new_object;
 
     default:

@@ -52,16 +52,6 @@ const randomCount = () => {
   }
 }
 
-//Transition Code
-const setFadeIn = () => {
-  let slide = document.querySelector("#app");
-  slide.classList.add("fadeIn");
-}
-
-const setFadeOut = () => {
-  let slide = document.querySelector("#app");
-  slide.classList.remove("fadeIn");
-}
 
 const quoteReducer = (state = defaultState, action) => {
   const new_object = Object.assign({},state);
@@ -99,11 +89,22 @@ class App extends React.Component {
   constructor(props) {
     super(props);
   }
+
+  setFadeIn = () => {
+    let slide = document.querySelector("#app");
+    slide.classList.add("fadeIn");
+  }
+  
+  setFadeOut = () => {
+    let slide = document.querySelector("#app");
+    slide.classList.remove("fadeIn");
+    this.props.submitRandom();
+  }
+
   random = event => {
     event.preventDefault();
-    setFadeIn();
-    setTimeout(setFadeOut, 900);
-    this.props.submitRandom();
+    this.setFadeIn();
+    setTimeout(this.setFadeOut, 900);
   }
   render() {
     return (

@@ -72,17 +72,6 @@ var randomCount = function randomCount() {
   return {
     type: RANDOM
   };
-}; //Transition Code
-
-
-var setFadeIn = function setFadeIn() {
-  var slide = document.querySelector("#app");
-  slide.classList.add("fadeIn");
-};
-
-var setFadeOut = function setFadeOut() {
-  var slide = document.querySelector("#app");
-  slide.classList.remove("fadeIn");
 };
 
 var quoteReducer = function quoteReducer() {
@@ -132,12 +121,24 @@ var App = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
 
-    _defineProperty(_assertThisInitialized(_this), "random", function (event) {
-      event.preventDefault();
-      setFadeIn();
-      setTimeout(setFadeOut, 900);
+    _defineProperty(_assertThisInitialized(_this), "setFadeIn", function () {
+      var slide = document.querySelector("#app");
+      slide.classList.add("fadeIn");
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "setFadeOut", function () {
+      var slide = document.querySelector("#app");
+      slide.classList.remove("fadeIn");
 
       _this.props.submitRandom();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "random", function (event) {
+      event.preventDefault();
+
+      _this.setFadeIn();
+
+      setTimeout(_this.setFadeOut, 900);
     });
 
     return _this;
@@ -189,7 +190,8 @@ var DisplayTweetIcon = function DisplayTweetIcon(props) {
 
 var QuoteText = function QuoteText(props) {
   return /*#__PURE__*/React.createElement("p", {
-    id: "text"
+    id: "text",
+    className: "fadeOut"
   }, props.text);
 };
 

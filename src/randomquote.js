@@ -104,7 +104,7 @@ class App extends React.Component {
   random = event => {
     event.preventDefault();
     this.setFadeIn();
-    setTimeout(this.setFadeOut, 900);
+    setTimeout(this.setFadeOut, 800);
   }
   render() {
     return (

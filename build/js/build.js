@@ -138,7 +138,7 @@ var App = /*#__PURE__*/function (_React$Component) {
 
       _this.setFadeIn();
 
-      setTimeout(_this.setFadeOut, 900);
+      setTimeout(_this.setFadeOut, 800);
     });
 
     return _this;

@@ -135,7 +135,7 @@ const DisplayTweetIcon = (props) => {
 
 const QuoteText = (props) => {
     return (
-      <p id='text'>{props.text}</p>
+      <p id='text' className='fadeOut'>{props.text}</p>
     );
 }
 
